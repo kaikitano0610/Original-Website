@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./reset.css">
+
 </head>
 <body>
   <header>
@@ -11,98 +14,104 @@
   </header>
 
   <main>
-    <section class="heroimage">
-      <img src="./hero-image.png" alt="">
-      <h1>Chat GPT</h1>
-      <h3>あなたの毎日をもっと便利に。</h3>
+    <section class="heroImage">
+      <h1 id="large_title">Chat GPT</h1>
+      <h3 class="sub-title">あなたの毎日をもっと便利に。</h3>
     </section>
 
     <section class="content-section" id="section1">
-      <h2></h2>
-      <div>
-        <div>
-          <img class="trouble.img" src="./order.jpg" alt="">
-          <div class="trouble.text"></div>
-        </div>
-        <div>
-          <img class="trouble.img" src="./order.jpg" alt="">
-          <div class="trouble.text"></div>
-        </div>
-        <div>
-          <img class="trouble.img" src="./order.jpg" alt="">
-          <div class="trouble.text"></div>
-        </div>
-      </div>
+      
+        <h2 class="section-heading" id="issue_title">こんな悩みありませんか？</h2>
+
+          <div class="trouble-box">
+            <img class="trouble-img" src="./order.jpg" alt="">
+            <div class="trouble-text"></div>
+          </div>
+          <div class="trouble-box">
+            <img class="trouble-img" src="./order.jpg" alt="">
+            <div class="trouble-text"></div>
+          </div>
+          <div class="trouble-box">
+            <img class="trouble-img" src="./order.jpg" alt="">
+            <div class="trouble-text"></div>
+          </div>
+
+
+        <p class="normal_text" id="trouble_under_text">これらの悩み全て、ChatGPTで解決できます</p>
+      
     </section>
     <section class="content-section" id="section2">
-      <div>
-        <div>
-          <img src="./pdf.jpg" alt="">
-          <p>pdf文章の解析と要約</p>
+      <h2 class="section-heading">Chat GPTでできること</h2>
+      <div class="slide">
+        <div class="possible_GPT">
+          <img class="possible_img" src="./pdf.jpg" alt="">
+          <p class="possible_text">pdf文章の解析と要約</p>
         </div>
-        <div>
-          <img src="./pdf.jpg" alt="">
-          <p>pdf文章の解析と要約</p>
+        <div class="possible_GPT">
+          <img class="possible_img" src="./pdf.jpg" alt="">
+          <p class="possible_text">pdf文章の解析と要約</p>
         </div>
-        <div>
-          <img src="./pdf.jpg" alt="">
-          <p>pdf文章の解析と要約</p>
+        <div class="possible_GPT">
+          <img class="possible_img" src="./pdf.jpg" alt="">
+          <p class="possible_text">pdf文章の解析と要約</p>
         </div>
-        <div>
-          <img src="./pdf.jpg" alt="">
-          <p>pdf文章の解析と要約</p>
+        <div class="possible_GPT">
+          <img class="possible_img" src="./pdf.jpg" alt="">
+          <p class="possible_text">pdf文章の解析と要約</p>
         </div>
-        <div>
-          <img src="./pdf.jpg" alt="">
-          <p>pdf文章の解析と要約</p>
+        <div class="possible_GPT">
+          <img class="possible_img" src="./pdf.jpg" alt="">
+          <p class="possible_text">pdf文章の解析と要約</p>
         </div>
-        <div>
-          <img src="./pdf.jpg" alt="">
-          <p>pdf文章の解析と要約</p>
+        <div class="possible_GPT">
+          <img class="possible_img" src="./pdf.jpg" alt="">
+          <p class="possible_text">pdf文章の解析と要約</p>
         </div>
-        <div>
-          <img src="./pdf.jpg" alt="">
-          <p>pdf文章の解析と要約</p>
-        </div>
-        <div>
-          <img src="./pdf.jpg" alt="">
-          <p>pdf文章の解析と要約</p>
-        </div>
-        <div>
-          <img src="./pdf.jpg" alt="">
-          <p>pdf文章の解析と要約</p>
-        </div>
+
       </div>
 
     </section>
     <section class="content-section" id="section3">
-      <h2>Chat GPTを体験</h2>
-      <p>chat GPTを体験してみましょう</p>
-      <div>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
+<h2 class="section-heading">Chat GPTを体験</h2>
+      <p class="normal_text">Chat GPTを体験してみましょう。聞きたい質問文をクリックしてください。</p>
+      <div id="experience_box">
+        <div class="botton-row">
+          <button class="experience_btm">これまでに飛行機に乗ったことがない人に、飛行機の乱気流について説明できますか？会話調で、かつ簡潔にお願いします。</button>
+          <button class="experience_btm">これまでに飛行機に乗ったことがない人に、飛行機の乱気流について説明できますか？会話調で、かつ簡潔にお願いします。</button>
+        </div>
+        <div class="botton-row">
+          <button class="experience_btm">これまでに飛行機に乗ったことがない人に、飛行機の乱気流について説明できますか？会話調で、かつ簡潔にお願いします。</button>
+          <button class="experience_btm">これまでに飛行機に乗ったことがない人に、飛行機の乱気流について説明できますか？会話調で、かつ簡潔にお願いします。</button>
+        </div>
+
       </div>
 
     </section>
     <section class="content-section" id="section4">
-      <h2>GPT4にはこんな機能も</h2>
-      <div>
-        <img src="" alt="">
-        <div>
-          <a href=""></a>
+      <h2 class="section-heading">GPT4にはこんな機能も</h2>
+      <div class="icon_generation">
+        <div class="gif_container">
+          <img class="gif"src="./gif.png" alt="">
+        </div>
+        <div class="gif_container">
+          <img class="gif"src="./gif.png" alt="">
         </div>
       </div>
     </section>
     <section class="content-section" id="section5">
-      <div>
-        <img src="" alt="">
-        <div>
-          <h2>毎日をもっと便利に。</h2>
-          <a href=""></a>
-        </div>
+    
+      <div class="image_container">
+        <img class="last_photo" src="./pdf.jpg" alt="">
       </div>
+      <div class="text_container">
+        <h2 class="section-heading" id="last_heading">毎日をもっと便利に。</h2>
+        <p class="last_text">ChatGPTは、最先端のAIが提供するパーソナライズされた対話体験で、学習、趣味、ビジネス、日常生活のあらゆるシーンであなたをサポートします。
+
+          あなたの毎日をもっと豊かに、もっと便利に変えてみませんか？
+          </p>
+        <a id="link_gpt" href="https://chat.openai.com/">Chat GPTを使ってみる</a>
+      </div>
+  
     </section>
 
   </main>
