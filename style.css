@@ -103,7 +103,7 @@ body{
   line-height: 100px;
 }
 
-.slide{
+.slider{
   height: 350px;
   width: 100%;
   display: flex;
@@ -133,7 +133,7 @@ body{
   white-space: normal; 
   word-wrap: break-word; 
 }
-.botton-row{
+.button-row{
   width: 970px;
   display: flex;
   justify-content: space-between;
