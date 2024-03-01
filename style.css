@@ -184,3 +184,40 @@ line-height: 50px;
   color: white;
   font-size: 20px;
 }
+.question{
+  color: white;
+  width: 700px;
+  margin: 40px 0px;
+  text-align: left;
+  line-height: 30px;
+
+}
+.answer{
+  color: white;
+  width: 700px;
+  margin: 40px 0px;
+  line-height: 30px;
+  text-align: left;
+}
+.common-parent{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.gpt-icon{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: 180px;
+  position: absolute;
+  left: -50px;
+}
+.user-icon{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  left: 20px;
+  position: absolute;
+  left: -50px;
+  top: 42px;
+}
