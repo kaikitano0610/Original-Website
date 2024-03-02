@@ -1,3 +1,36 @@
+// const hero = document.querySelector(".hero");
+// const hero_slider = document.querySelector(".hero_slider");
+
+// const tl = gsap.timeline();
+
+// gsap.set("#large_title",{opacity:0});
+// gsap.set(".sub-title",{opacity:0});
+
+// tl.fromTo(hero, 1, { height: "0%" }, { height: "100%", ease: Power2.easeInOut })
+
+//   .to("#large_title",{duration:1,opacity:1,delay:0.5})
+
+//   .fromTo(
+//     ".hero",
+//     1.2,
+//     { width: "100%" },
+//     { width: "100%", ease: Power2.easeInOut,}
+//   )
+//   .to(".sub-title",{duration:1,opacity:1,delay:0.2})
+  
+//   .fromTo(
+//     ".hero_slider",
+//     1.2,
+//     { y: "-100%" },
+//     { y: "0%", ease: Power2.easeInOut },
+//     "-=1.2"
+//   )
+
+gsap.set("#large_title",{opacity:0});
+gsap.set(".sub-title",{opacity:0});
+gsap.fromTo(".hero", 1.5, { height: "0%" }, { height: "100%", ease: Power2.easeInOut });
+gsap.to("#large_title",{duration:1,opacity:1,delay:1.5,ease: Power2.easeInOut})
+gsap.to(".sub-title",{duration:1,opacity:1,delay:3})
 
 
 
@@ -68,3 +101,4 @@ $(function(){
     $("#experience_container").html(initialExperienceContent).fadeIn(1000);
   });
 });
+
