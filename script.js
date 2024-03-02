@@ -1,30 +1,30 @@
-// const hero = document.querySelector(".hero");
-// const hero_slider = document.querySelector(".hero_slider");
+gsap.registerPlugin(ScrollTrigger);
 
-// const tl = gsap.timeline();
+    document.addEventListener("DOMContentLoaded", function() {
+      // ドキュメントが完全に読み込まれた後にアニメーションを設定
+      const listWrapperEl = document.querySelector('.slider_parent');
+      const listEl = document.querySelector('.slider');
 
-// gsap.set("#large_title",{opacity:0});
-// gsap.set(".sub-title",{opacity:0});
+      gsap.to(listEl, {
+        x: () => -(listEl.clientWidth - listWrapperEl.clientWidth),
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '#section2',
+          start: 'top top',
+          end: () => `+=${listEl.clientWidth - listWrapperEl.clientWidth}`,
+          scrub: true,
+          pin: true,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+        },
+      });
 
-// tl.fromTo(hero, 1, { height: "0%" }, { height: "100%", ease: Power2.easeInOut })
-
-//   .to("#large_title",{duration:1,opacity:1,delay:0.5})
-
-//   .fromTo(
-//     ".hero",
-//     1.2,
-//     { width: "100%" },
-//     { width: "100%", ease: Power2.easeInOut,}
-//   )
-//   .to(".sub-title",{duration:1,opacity:1,delay:0.2})
-  
-//   .fromTo(
-//     ".hero_slider",
-//     1.2,
-//     { y: "-100%" },
-//     { y: "0%", ease: Power2.easeInOut },
-//     "-=1.2"
-//   )
+      gsap.set("#large_title", {opacity: 0});
+      gsap.set(".sub-title", {opacity: 0});
+      gsap.fromTo(".hero", 1.5, { height: "0%" }, { height: "100%", ease: Power2.easeInOut });
+      gsap.to("#large_title", {duration: 1, opacity: 1, delay: 1.5, ease: Power2.easeInOut});
+      gsap.to(".sub-title", {duration: 1, opacity: 1, delay: 3});
+    });
 
 gsap.set("#large_title",{opacity:0});
 gsap.set(".sub-title",{opacity:0});
@@ -58,6 +58,15 @@ $(function(){
 
         //戻るボタン作成
         let $return_button=$("<button>").addClass("return").text("戻る");
+
+        $return_button.hover(
+          function() { // マウスがホバーされた時の動作
+              $(this).addClass('hover');
+          }, 
+          function() { // マウスが離れた時の動作
+              $(this).removeClass('hover');
+          }
+        );
         
         // 質問テキストを持つ要素を作成
         let $q1_question = $("<div>").addClass("question").text("これまでに飛行機に乗ったことがない人に、飛行機の乱気流について説明できますか？会話調で、かつ簡潔にお願いします。");

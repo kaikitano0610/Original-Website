@@ -6,6 +6,8 @@
   <title>Document</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./reset.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
 
 </head>
 <body>
@@ -28,50 +30,93 @@
         <h2 class="section-heading" id="issue_title">こんな悩みありませんか？</h2>
 
           <div class="trouble-box">
-            <img class="trouble-img" src="./order.jpg" alt="">
-            <div class="trouble-text"></div>
+            <img class="trouble-img" src="./ok-size/mail_man.jpg" alt="">
+            <div class="trouble-texts">
+              <p class="trouble_text">上司や取引先にメールを書くのに時間がかかって他のタスクに手が回らない</p></div>
           </div>
           <div class="trouble-box">
-            <img class="trouble-img" src="./order.jpg" alt="">
-            <div class="trouble-text"></div>
+            <img class="trouble-img" src="./ok-size/order_man.jpg" alt="">
+            <div class="trouble-texts"><p class="trouble_text">初めての海外旅行でレストランでの注文方法が分からない</p></div>
           </div>
           <div class="trouble-box">
-            <img class="trouble-img" src="./order.jpg" alt="">
-            <div class="trouble-text"></div>
+            <img class="trouble-img" src="./ok-size/pc_woman.jpg" alt="">
+            <div class="trouble-texts"><p class="trouble_text">副業でWebサイト制作を始めたいけど何から手を付けたらいいのか分からない</p></div>
           </div>
 
 
-        <p class="normal_text" id="trouble_under_text">これらの悩み全て、ChatGPTで解決できます</p>
+        <p class="normal_text" id="trouble_under_text">
+          効率的なメールの自動作成、言語の壁を越えたコミュニケーション、Web制作のための勉強法まで、ChatGPTを使えば手軽に解決することが出来ます。
+        </p>
       
     </section>
     <section class="content-section" id="section2">
       <h2 class="section-heading">Chat GPTでできること</h2>
-      <div class="slider">
-        <div class="possible_GPT">
-          <img class="possible_img" src="./pdf.jpg" alt="">
-          <p class="possible_text">pdf文章の解析と要約</p>
+      <div class="slider_parent">
+        <div class="slider">
+          <div class="possible_GPT">
+            <img class="possible_img" src="./ok-size/pdf_man.jpg" alt="">
+            <p class="possible_head">
+              pdf文章の解析と要約</p>
+              <p class="possible_text">
+                PDFファイルを読み込んで内容を解析し、その要約を提供することができます。</p>
+          </div>
+          <div class="possible_GPT">
+            <img class="possible_img" src="./ok-size/input_image.jpg" alt="">
+            <p class="possible_head">
+              画像入力による質問応答</p>
+              <p class="possible_text">
+                アップロードした画像に関する質問をすると、ChatGPT-4は画像の内容を解析して質問に回答します。</p>
+          </div>
+          <div class="possible_GPT">
+            <img class="possible_img" src="./ok-size/create_picture.jpg" alt="">
+            <p class="possible_head">
+              画像生成</p>
+              <p class="possible_text">
+                テキストの指示に基づいて画像を生成することが出来ます。</p>
+          </div>
+          <div class="possible_GPT">
+            <img class="possible_img" src="./ok-size/programming.jpg" alt="">
+            <p class="possible_head">
+              コードの自動生成と解説</p>
+              <p class="possible_text">
+                プログラミングに関する質問に対して、コードを生成し、そのコードがどのように機能するかを解説します。</p>
+          </div>
+          <div class="possible_GPT">
+            <img class="possible_img" src="./ok-size/english_man.jpg" alt="">
+            <p class="possible_head">
+              言語学習アシスタント</p>
+              <p class="possible_text">
+                外国語を学ぶ際に、練習問題の作成や翻訳、会話の練習相手になることもできます。</p>
+          </div>
+          <div class="possible_GPT">
+            <img class="possible_img" src="./ok-size/writing.jpg" alt="">
+            <p class="possible_head">
+              記事の執筆</p>
+              <p class="possible_text">
+                特定のトピックに関する記事を生成し、必要に応じて編集することができます。</p>
+          </div>
+          <div class="possible_GPT">
+            <img class="possible_img" src="./ok-size/idea_man.jpg" alt="">
+            <p class="possible_head">
+              アイデアの形成</p>
+              <p class="possible_text">
+                資料の構成や企画書の立案はもちろん、新しいプロジェクトの構想段階や特定の問題に対する解決策も提示します。</p>
+          </div>
+          <div class="possible_GPT">
+            <img class="possible_img" src="./ok-size/data_analiysis.jpg" alt="">
+            <p class="possible_head">
+              データの分析</p>
+              <p class="possible_text">
+                データセットを解析し、統計的な傾向や相関関係、異常値の検出などをすることができます。</p>
+          </div>
+          <div class="possible_GPT">
+            <img class="possible_img" src="./ok-size/cooking.jpg" alt="">
+            <p class="possible_head">
+              レシピの提案</p>
+              <p class="possible_text">
+                旬の食材や家にある食材をもとに、おいしいレシピを提供します。</p>
+          </div>
         </div>
-        <div class="possible_GPT">
-          <img class="possible_img" src="./pdf.jpg" alt="">
-          <p class="possible_text">pdf文章の解析と要約</p>
-        </div>
-        <div class="possible_GPT">
-          <img class="possible_img" src="./pdf.jpg" alt="">
-          <p class="possible_text">pdf文章の解析と要約</p>
-        </div>
-        <div class="possible_GPT">
-          <img class="possible_img" src="./pdf.jpg" alt="">
-          <p class="possible_text">pdf文章の解析と要約</p>
-        </div>
-        <div class="possible_GPT">
-          <img class="possible_img" src="./pdf.jpg" alt="">
-          <p class="possible_text">pdf文章の解析と要約</p>
-        </div>
-        <div class="possible_GPT">
-          <img class="possible_img" src="./pdf.jpg" alt="">
-          <p class="possible_text">pdf文章の解析と要約</p>
-        </div>
-
       </div>
 
     </section>
@@ -126,6 +171,7 @@
 
 
   </footer>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="script.js"></script>

@@ -1,16 +1,16 @@
-const container = document.querySelector('.box-02');
-const slides = document.querySelectorAll('.slide');
-const containerWidth = container.offsetWidth;
+const listWrapperEl = document.querySelector('.side-scroll-list-wrapper');
+const listEl = document.querySelector('.side-scroll-list');
 
-gsap.to(slides, { 
-   xPercent: -110 * (slides.length - 1),
-   ease: "none",
-   scrollTrigger: {
-      trigger: container,
-      pin: true,
-      scrub: 1,
-      end: `+=${containerWidth}`, // 修正箇所: テンプレートリテラルを使用
-      anticipatePin: 1,
-      invalidateOnRefresh: true,
-  }
+gsap.to(listEl, {
+  x: () => -(listEl.clientWidth - listWrapperEl.clientWidth),
+  ease: 'none',
+  scrollTrigger: {
+    trigger: '.side-scroll',
+    start: 'top top', // 要素の上端（top）が、ビューポートの上端（top）にきた時
+    end: () => `+=${listEl.clientWidth - listWrapperEl.clientWidth}`,
+    scrub: true,
+    pin: true,
+    anticipatePin: 1,
+    invalidateOnRefresh: true,
+  },
 });

@@ -8,13 +8,13 @@
 
 html, body {
   width: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   margin: 0;
   padding: 0;
 }
 
 body{
-  background-color: #212121;
+  background-color: #242424;
 
 }
 /* .heroImage{
@@ -26,7 +26,7 @@ body{
     left: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to bottom, rgb(0, 0, 0),#212121);
+    background: linear-gradient(to bottom, rgb(0, 0, 0),#242424);
     z-index: -1;
 }
 .heroImage{
@@ -51,8 +51,7 @@ body{
 
   object-fit: cover;
  }
-
- .hero::after {
+ /* .hero::after {
   content: "";
   position: absolute;
   top: 0;
@@ -61,6 +60,20 @@ body{
   width: 100%;
   height: 100%;
   opacity: 0.4;
+
+} */
+
+
+ .hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background-color: black; */
+  width: 100%;
+  height: 100%;
+  /* opacity: 0.4; */
+  background-image: linear-gradient(180deg, transparent 0 10%, #212121 100%);
 }
 
 /* .heroImage {
@@ -173,18 +186,29 @@ body{
 }
 
 .slider{
+  /* position: absolute; */
   height: 350px;
-  width: 100%;
+  width: 6000px;
   display: flex;
+  left: 0px;
   
 }
+
+.slider_parent{
+  position: relative;
+    width: 100%;
+    height: 700px;
+}
+
+
 .possible_GPT{
   height: 100%;
-  width: 250px;
-  margin: 30px;
+  width: 300px;
+  margin: 30px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
   
 }
 .possible_img{
