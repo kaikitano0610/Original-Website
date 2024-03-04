@@ -38,16 +38,15 @@ gsap.to(".sub-title",{duration:1,opacity:1,delay:3})
 
 
 
-$(function(){
-
-  $(".experience_btm").hover(
-    function() { // マウスがホバーされた時の動作
+$(function() {
+    // マウスがホバーされた時の動作
+    $(document).on("mouseenter", ".experience_btm", function() {
         $(this).addClass('experience_btm-hover');
-    }, 
-    function() { // マウスが離れた時の動作
+    });
+    // マウスが離れた時の動作
+    $(document).on("mouseleave", ".experience_btm", function() {
         $(this).removeClass('experience_btm-hover');
-    }
-  );
+    });
 
   // experience_containerの初期内容を保存
   var initialExperienceContent = $("#experience_container").html();
