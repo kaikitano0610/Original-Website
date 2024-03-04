@@ -5,6 +5,8 @@ gsap.registerPlugin(ScrollTrigger);
       const listWrapperEl = document.querySelector('.slider_parent');
       const listEl = document.querySelector('.slider');
 
+      
+
       gsap.to(listEl, {
         x: () => -(listEl.clientWidth - listWrapperEl.clientWidth),
         ease: 'none',
@@ -59,12 +61,24 @@ $(function(){
       if ($id === "q1") {
         // 共通の親要素を作成
         let $commonParent = $("<div>").addClass("common-parent");
+
+        //アイコンとテキストを入れる箱を作成
+        let $user_box = $("<div>").addClass("user_box");
+        let $gpt_box = $("<div>").addClass("gpt_box");
         
+        //アイコンのみが入る箱を作成
+        let $question_icon = $("<div>").addClass("question_icon");
+        let $answer_icon = $("<div>").addClass("answer_icon");
+
         // 質問者のアイコン画像を作成
-        let $userIcon = $("<img>").attr("src", "./user_logo.jpg").addClass("user-icon");
+        let $userIcon = $("<img>").attr("src", "./ok-size/user_logo.jpg").addClass("user-icon");
         
         // GPTのアイコン画像を作成
-        let $gptIcon = $("<img>").attr("src", "./gpt_logo.jpg").addClass("gpt-icon");
+        let $gptIcon = $("<img>").attr("src", "./ok-size/gpt_logo.jpg").addClass("gpt-icon");
+
+        //アイコンが入る箱にアイコンを挿入
+        $question_icon.append($userIcon)
+        $answer_icon.append($gptIcon)
 
         //戻るボタン作成
         let $return_button=$("<button>").addClass("return").text("戻る");
@@ -80,13 +94,17 @@ $(function(){
         
         // 質問テキストを持つ要素を作成
         let $q1_question = $("<div>").addClass("question").text("これまでに飛行機に乗ったことがない人に、飛行機の乱気流について説明できますか？会話調で、かつ簡潔にお願いします。");
-        
+
         // 回答テキストを動的に表示するための空の要素を作成し、GPTアイコンを追加
         let $q1_answer = $("<div>").addClass("answer");
         
-        // 質問と回答要素を共通の親要素に追加
-        $commonParent.append($userIcon).append($q1_question).append($gptIcon).append($q1_answer);
-        
+        //親要素にそれぞれのboxを追加
+        $commonParent.append($user_box).append($gpt_box)
+
+        //それぞれのboxにアイコンとテキストの箱を追加
+        $user_box.append($question_icon).append($q1_question)
+        $gpt_box.append($answer_icon).append($q1_answer)
+
         
         // 共通の親要素をコンテナに追加してフェードイン
         $(this).append($commonParent).fadeIn(1000, function() {
@@ -111,16 +129,27 @@ $(function(){
 
         });
       }
-
       if ($id === "q2") {
         // 共通の親要素を作成
         let $commonParent = $("<div>").addClass("common-parent");
+
+        //アイコンとテキストを入れる箱を作成
+        let $user_box = $("<div>").addClass("user_box");
+        let $gpt_box = $("<div>").addClass("gpt_box");
         
+        //アイコンのみが入る箱を作成
+        let $question_icon = $("<div>").addClass("question_icon");
+        let $answer_icon = $("<div>").addClass("answer_icon");
+
         // 質問者のアイコン画像を作成
-        let $userIcon = $("<img>").attr("src", "./user_logo.jpg").addClass("user-icon");
+        let $userIcon = $("<img>").attr("src", "./ok-size/user_logo.jpg").addClass("user-icon");
         
         // GPTのアイコン画像を作成
-        let $gptIcon = $("<img>").attr("src", "./gpt_logo.jpg").addClass("gpt-icon");
+        let $gptIcon = $("<img>").attr("src", "./ok-size/gpt_logo.jpg").addClass("gpt-icon");
+
+        //アイコンが入る箱にアイコンを挿入
+        $question_icon.append($userIcon)
+        $answer_icon.append($gptIcon)
 
         //戻るボタン作成
         let $return_button=$("<button>").addClass("return").text("戻る");
@@ -136,13 +165,17 @@ $(function(){
         
         // 質問テキストを持つ要素を作成
         let $q1_question = $("<div>").addClass("question").text("冷蔵庫に豚バラと白菜と牛乳があります。これらの材料を使って、体があたたまるような夜ご飯の献立を考えてください。");
-        
+
         // 回答テキストを動的に表示するための空の要素を作成し、GPTアイコンを追加
         let $q1_answer = $("<div>").addClass("answer");
         
-        // 質問と回答要素を共通の親要素に追加
-        $commonParent.append($userIcon).append($q1_question).append($gptIcon).append($q1_answer);
-        
+        //親要素にそれぞれのboxを追加
+        $commonParent.append($user_box).append($gpt_box)
+
+        //それぞれのboxにアイコンとテキストの箱を追加
+        $user_box.append($question_icon).append($q1_question)
+        $gpt_box.append($answer_icon).append($q1_answer)
+
         
         // 共通の親要素をコンテナに追加してフェードイン
         $(this).append($commonParent).fadeIn(1000, function() {
@@ -158,7 +191,7 @@ $(function(){
               }
               setTimeout(function() {
                 showLetter(text, index + 1, $element, callback); // callbackを次の再帰呼び出しに渡します
-              }, 50); // 速度調整はここで
+              }, 20); // 速度調整はここで
             } else {
               callback(); // テキストの全文字が表示された後にcallback関数を呼び出します
             }
@@ -172,16 +205,27 @@ $(function(){
 
         });
       }
-
       if ($id === "q3") {
         // 共通の親要素を作成
         let $commonParent = $("<div>").addClass("common-parent");
+
+        //アイコンとテキストを入れる箱を作成
+        let $user_box = $("<div>").addClass("user_box");
+        let $gpt_box = $("<div>").addClass("gpt_box");
         
+        //アイコンのみが入る箱を作成
+        let $question_icon = $("<div>").addClass("question_icon");
+        let $answer_icon = $("<div>").addClass("answer_icon");
+
         // 質問者のアイコン画像を作成
-        let $userIcon = $("<img>").attr("src", "./user_logo.jpg").addClass("user-icon");
+        let $userIcon = $("<img>").attr("src", "./ok-size/user_logo.jpg").addClass("user-icon");
         
         // GPTのアイコン画像を作成
-        let $gptIcon = $("<img>").attr("src", "./gpt_logo.jpg").addClass("gpt-icon");
+        let $gptIcon = $("<img>").attr("src", "./ok-size/gpt_logo.jpg").addClass("gpt-icon");
+
+        //アイコンが入る箱にアイコンを挿入
+        $question_icon.append($userIcon)
+        $answer_icon.append($gptIcon)
 
         //戻るボタン作成
         let $return_button=$("<button>").addClass("return").text("戻る");
@@ -197,13 +241,17 @@ $(function(){
         
         // 質問テキストを持つ要素を作成
         let $q1_question = $("<div>").addClass("question").text("釣りが大好きなお父さんへのクリエイティブなギフトアイデアをいくつか考えてもらえますか？ただし、釣り具は含めないでください。");
-        
+
         // 回答テキストを動的に表示するための空の要素を作成し、GPTアイコンを追加
         let $q1_answer = $("<div>").addClass("answer");
         
-        // 質問と回答要素を共通の親要素に追加
-        $commonParent.append($userIcon).append($q1_question).append($gptIcon).append($q1_answer);
-        
+        //親要素にそれぞれのboxを追加
+        $commonParent.append($user_box).append($gpt_box)
+
+        //それぞれのboxにアイコンとテキストの箱を追加
+        $user_box.append($question_icon).append($q1_question)
+        $gpt_box.append($answer_icon).append($q1_answer)
+
         
         // 共通の親要素をコンテナに追加してフェードイン
         $(this).append($commonParent).fadeIn(1000, function() {
@@ -219,11 +267,12 @@ $(function(){
               }
               setTimeout(function() {
                 showLetter(text, index + 1, $element, callback); // callbackを次の再帰呼び出しに渡します
-              }, 50); // 速度調整はここで
+              }, 20); // 速度調整はここで
             } else {
               callback(); // テキストの全文字が表示された後にcallback関数を呼び出します
             }
           }
+          
           // showLetter関数を呼び出す際に、全ての文字が表示された後に実行したい処理を含むcallback関数を渡します
           showLetter(q1_answerText, 0, $q1_answer, function() {
             // ここに全文字表示後の処理を書きます
@@ -232,16 +281,27 @@ $(function(){
 
         });
       }
-
       if ($id === "q4") {
         // 共通の親要素を作成
         let $commonParent = $("<div>").addClass("common-parent");
+
+        //アイコンとテキストを入れる箱を作成
+        let $user_box = $("<div>").addClass("user_box");
+        let $gpt_box = $("<div>").addClass("gpt_box");
         
+        //アイコンのみが入る箱を作成
+        let $question_icon = $("<div>").addClass("question_icon");
+        let $answer_icon = $("<div>").addClass("answer_icon");
+
         // 質問者のアイコン画像を作成
-        let $userIcon = $("<img>").attr("src", "./user_logo.jpg").addClass("user-icon");
+        let $userIcon = $("<img>").attr("src", "./ok-size/user_logo.jpg").addClass("user-icon");
         
         // GPTのアイコン画像を作成
-        let $gptIcon = $("<img>").attr("src", "./gpt_logo.jpg").addClass("gpt-icon");
+        let $gptIcon = $("<img>").attr("src", "./ok-size/gpt_logo.jpg").addClass("gpt-icon");
+
+        //アイコンが入る箱にアイコンを挿入
+        $question_icon.append($userIcon)
+        $answer_icon.append($gptIcon)
 
         //戻るボタン作成
         let $return_button=$("<button>").addClass("return").text("戻る");
@@ -257,13 +317,17 @@ $(function(){
         
         // 質問テキストを持つ要素を作成
         let $q1_question = $("<div>").addClass("question").text("良い新年の抱負を立てるためのアイデアを3つ教えてください。個人的なもの、家族向けのもの、そして仕事に関連するものをいくつか教えてください。");
-        
+
         // 回答テキストを動的に表示するための空の要素を作成し、GPTアイコンを追加
         let $q1_answer = $("<div>").addClass("answer");
         
-        // 質問と回答要素を共通の親要素に追加
-        $commonParent.append($userIcon).append($q1_question).append($gptIcon).append($q1_answer);
-        
+        //親要素にそれぞれのboxを追加
+        $commonParent.append($user_box).append($gpt_box)
+
+        //それぞれのboxにアイコンとテキストの箱を追加
+        $user_box.append($question_icon).append($q1_question)
+        $gpt_box.append($answer_icon).append($q1_answer)
+
         
         // 共通の親要素をコンテナに追加してフェードイン
         $(this).append($commonParent).fadeIn(1000, function() {
@@ -279,7 +343,7 @@ $(function(){
               }
               setTimeout(function() {
                 showLetter(text, index + 1, $element, callback); // callbackを次の再帰呼び出しに渡します
-              }, 50); // 速度調整はここで
+              }, 20); // 速度調整はここで
             } else {
               callback(); // テキストの全文字が表示された後にcallback関数を呼び出します
             }
@@ -298,9 +362,24 @@ $(function(){
   });
 
    // 戻るボタンのイベントハンドラ
-   $(document).on("click", ".return", function() {
+   $(document).on("click", ".return, #section3", function() {
     // experience_containerの内容を初期状態に復元
     $("#experience_container").html(initialExperienceContent).fadeIn(1000);
   });
+
+
+  $(function(){
+    $(window).scroll(function (){
+      $('.js-fade,.js-fade-right,.js-fade-left').each(function(){
+        var pos = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll > pos - windowHeight + 100){
+          $(this).addClass('scroll');
+        }
+      });
+    });
+  });
+
 });
 

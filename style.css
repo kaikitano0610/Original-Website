@@ -17,9 +17,7 @@ body{
   background-color: #242424;
 
 }
-/* .heroImage{
-  background-color: white;
-} */
+
 .hero_slider{
   position: absolute;
     top: 0;
@@ -38,7 +36,7 @@ body{
 }
 .hero {
   height: 30%;
-  width: 100%;
+  width: 100vw;
   position: relative;
   display: flex;
   align-items: center;
@@ -73,6 +71,7 @@ body{
   position: absolute;
   z-index: 5;
 }
+
 .sub-title{
   font-size: 30px;
   color: white;
@@ -80,11 +79,35 @@ body{
   top: 70%;
   z-index: 5;
 }
+@media screen and (max-width:730px){
+  #large_title{
+    font-size: 60px;
+    top: 40%;
+  }  
+  .sub-title{
+    font-size: 17px;
+    top: 56%;
+
+  }
+}
 .section-heading{
   font-size: 45px;
   color: white;
-  margin: 50px;
+  margin: 50px 0px;
   margin-top:200px ;
+}
+#issue_title{
+  margin: 100px 0px;
+}
+
+@media screen and (max-width:730px){
+  .section-heading{
+    font-size: 23px;
+    margin: 10px 0px 50px;
+  }
+  #issue_title{
+    margin: 60px 0px ;
+  }
 }
 
 #last_heading{
@@ -108,6 +131,14 @@ body{
   max-width: 700px;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width:730px){
+  .trouble-box{
+    height: 40px;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
 }
 .content-section{
   height: auto;
@@ -148,7 +179,6 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .trouble_text{
@@ -158,15 +188,20 @@ body{
   line-height: 30px;
 
 }
+@media screen and (max-width:730px){
+  .trouble_text{
+    font-size: 9px;
+    line-height: 10px;
+  }
+}
+
 
 .return.hover {
   opacity: 40%; 
 }
 
 
-#issue_title{
-  margin: 100px;
-}
+
 
 .normal_text{
   color: white;
@@ -179,7 +214,20 @@ body{
 #trouble_under_text{
   margin-top: 130px;
   line-height: 30px;
-  max-width: 800px;
+  max-width: 710px;
+}
+@media screen and (max-width:730px){
+  .normal_text{
+    font-size: 12px;
+    margin: 30px 0px 30px;
+  }
+  #trouble_under_text{
+    line-height: 16px;
+    margin-top: 40px;
+    width: 80%;
+    max-width: 475px;
+  }
+
 }
 
 #highlight{
@@ -194,15 +242,14 @@ body{
   width: 2950px;
   display: flex;
   left: 0px;
-  
 }
+
 
 .slider_parent{
   position: relative;
     width: 100%;
     height: 400px;
 }
-
 
 .possible_GPT{
   height: 100%;
@@ -233,6 +280,31 @@ body{
   line-height: 23px;
 
 }
+
+@media screen and (max-width:730px){
+  .slider{
+    height: 200px;
+    width: 1900px;
+  }
+  .possible_head{
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  .possible_text{
+    font-size: 11px;
+    line-height: 16px;
+    margin-top: 10px;
+  }
+  .possible_GPT{
+    width: 150px;
+  }
+  #heading_possible{
+    margin-top: 28vh;
+  }
+
+ 
+}
+
 #experience_container{
   margin-bottom: 70px;
   width: 100vw;
@@ -247,7 +319,8 @@ body{
   border-bottom-right-radius: 15px;
 }
 .experience_btm-hover{
-  opacity: 70%;
+  /* opacity: 70%; */
+  transform: scale(0.98);
 }
 
 .button-row{
@@ -264,15 +337,27 @@ body{
   flex-direction: column;
   align-items: center;
 }
+@media screen and (max-width:730px){
+  .button-row{
+    flex-direction: column;
+    width: 80vw;
+    
+  }
+  .experience_btm{
+    width: 100%;
+    font-size: 10px;
+  }
+ 
+}
 .icon_generation{
   width: 80%;
-  height: 680px;
+  height: auto;
   display: flex;
   justify-content: space-around;
 
 }
 .gif_container{
-  height: 80%;
+  height: 100%;
   width: 40%;
 }
 .gif{
@@ -282,6 +367,16 @@ body{
   width: 40%;
   height: 60%;
 }
+
+@media screen and (max-width:730px) {
+  .icon_generation{
+    flex-direction: column;
+  } 
+  .gif_container{
+    width: 100%;
+  } 
+}
+
 .text_container{
   width: 80%;
   height: 60%;
@@ -290,10 +385,7 @@ body{
   justify-content: center;
   align-items: center;
 }
-.last_photo{
-  width: 100%;
-  height: 100%;
-}
+
 .last_text{
 white-space: normal; 
 word-wrap: break-word; 
@@ -302,18 +394,42 @@ font-size: 20px;
 line-height: 50px;
 text-align: center;
 }
+
+@media screen and (max-width:730px) {
+  .last_text {
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
 #link_gpt{
   display: block;
   color: white;
   font-size: 30px;
   margin: 30px;
   margin-top: 100px;
+  background-color: transparent; 
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+#link_gpt:hover {
+  color:#242424;
+  background-color: white; 
+  text-decoration: none;
+}
+
+
+
+@media screen and (max-width:730px) {
+  #link_gpt{
+    font-size: 20px;
+    margin: 40px;
+  }
 }
 
 .question{
   color: white;
   width: 700px;
-  margin: 40px 0px;
+  margin: 0px 40px 40px 40px;
   text-align: left;
   line-height: 25px;
 
@@ -321,33 +437,65 @@ text-align: center;
 .answer{
   color: white;
   width: 700px;
-  margin: 40px 0px;
+  margin: 0px 40px 40px 40px;
   line-height: 25px;
   text-align: left;
 }
 .common-parent{
-  position: relative;
+  /* position: relative; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* width: 90%; */
 }
+
+.user_box{
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.gpt_box{
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.question_icon{
+  width: auto;
+  height: auto;
+  margin-left: 10px;
+}
+.answer_icon{
+  width: auto;
+  height: auto;
+  margin-left: 10px;
+}
+
+
+
+.user-icon{
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: 20px;
+  
+
+}
+
 .gpt-icon{
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  top: 180px;
-  position: absolute;
-  left: -50px;
+  
+
 }
-.user-icon{
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  left: 20px;
-  position: absolute;
-  left: -50px;
-  top: 42px;
-}
+
 .return{
   width: 100px;
   height: 40px;
@@ -373,4 +521,33 @@ text-align: center;
 }
 #copy_right{
   font-size: 16px;
+}
+
+
+.js-fade {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: opacity 1s,visibility 1s, transform 1s;
+}
+
+
+.js-fade-right {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(50px);
+  transition: opacity 1s,visibility 1s, transform 1s;
+}
+
+.js-fade-left {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50px);
+  transition: opacity 1s,visibility 1s, transform 1s;
+}
+
+.scroll {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
 }
