@@ -6,6 +6,12 @@
   font-family: "Noto Sans JP", sans-serif;
 }
 
+.main{
+  display: flex;
+  flex-direction: column;
+  
+}
+
 html, body {
   width: 100%;
   overflow-x: hidden;
@@ -329,7 +335,6 @@ body{
 }
 
 #experience_container{
-  margin-bottom: 300px;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -489,11 +494,17 @@ text-align: center;
 }
 
 .common-parent{
-  /* position: relative; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 1120px;
   /* width: 90%; */
+}
+@media screen and (max-width:730px) {
+  .common-parent{
+    height: 1300px;
+  }
+  
 }
 
 .user_box{

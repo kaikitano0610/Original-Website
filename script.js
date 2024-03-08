@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
         x: () => -(listEl.clientWidth - listWrapperEl.clientWidth),
         ease: 'none',
         scrollTrigger: {
-          trigger: '#section3',
+          trigger: '#section2',
           start: 'top top',
           end: () => `+=${listEl.clientWidth - listWrapperEl.clientWidth}`,
           scrub: true,
@@ -21,11 +21,7 @@ gsap.registerPlugin(ScrollTrigger);
         },
       });
 
-      gsap.set("#large_title", {opacity: 0});
-      gsap.set(".sub-title", {opacity: 0});
-      gsap.fromTo(".hero", 1.5, { height: "0%" }, { height: "100%", ease: Power2.easeInOut });
-      gsap.to("#large_title", {duration: 1, opacity: 1, delay: 1.5, ease: Power2.easeInOut});
-      gsap.to(".sub-title", {duration: 1, opacity: 1, delay: 3});
+
     });
 
 gsap.set("#large_title",{opacity:0});
@@ -34,7 +30,22 @@ gsap.fromTo(".hero", 1.5, { height: "0%" }, { height: "100%", ease: Power2.easeI
 gsap.to("#large_title",{duration:1,opacity:1,delay:1.5,ease: Power2.easeInOut})
 gsap.to(".sub-title",{duration:1,opacity:1,delay:3})
 
+function checkWindowSize() {
+  var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  var textElement = document.querySelector('#experience');
 
+  if (width < 730) {
+    textElement.innerHTML = "Chat GPTを体験してみましょう。聞きたい質問文をタップしてください。";
+  } else {
+    textElement.innerHTML = "Chat GPTを体験してみましょう。聞きたい質問文をクリックしてください。";
+  }
+}
+
+// ウィンドウのリサイズイベントに関数をバインドします
+window.addEventListener('resize', checkWindowSize);
+
+// ページ読み込み時にも実行します
+checkWindowSize();
 
 
 
@@ -320,7 +331,7 @@ $(function() {
         );
         
         // 質問テキストを持つ要素を作成
-        let $q1_question = $("<div>").addClass("question").text("副業でWebサイトの制作を始めたいと思います。ただ、スキルも経験も0なので、何から始めたらいいか教えてください。");
+        let $q1_question = $("<div>").addClass("question").text("副業でWebサイトの制作を始めたいと思います。ただ、スキルも経験も0ないので、何から始めたらいいか教えてください。");
 
         // 回答テキストを動的に表示するための空の要素を作成し、GPTアイコンを追加
         let $q1_answer = $("<div>").addClass("answer");
@@ -336,7 +347,7 @@ $(function() {
         // 共通の親要素をコンテナに追加してフェードイン
         $(this).append($commonParent).fadeIn(1000, function() {
           // 一文字ずつテキストを表示する関数
-          let q1_answerText = "Webサイト制作を副業として始めるには、基本的なスキルを身につけることからスタートする必要があります。以下に、Webサイト制作に必要なスキルを習得するためのステップを紹介します。\n\n1. HTMLとCSSの基礎を学ぶ\n　Webサイトの構造を作るHTMLと、その見た目を整えるCSSは、Webサイト制作の基本です。これらの言語の基礎を理解し、簡単なページが作れるようになることが第一歩です。\n2. JavaScriptを学ぶ\n　JavaScriptは、Webページに動的な要素を加えるためのプログラミング言語です。基本的な操作から始めて、徐々に複雑な機能の実装方法を学びましょう。\n3. レスポンシブデザインを理解する\n　スマートフォンやタブレットなど、さまざまなデバイスで適切に表示されるように、レスポンシブデザインの知識を身につけることが重要です。\n4. Webデザインの基本を学ぶ\n　良いWebサイトは、使いやすさと見た目の良さが重要です。基本的なデザイン原則を学び、ユーザー体験(UX)とユーザーインターフェイス(UI)の設計について理解しましょう。\n5. CMSの利用を学ぶ\n　WordPressなどのコンテンツ管理システム(CMS)を使えば、コーディング知識が少なくてもWebサイトを構築できます。CMSの基本的な使い方を学び、テーマやプラグインのカスタマイズ方法にも触れてみましょう。\n6. SEOの基本を理解する\n　検索エンジン最適化(SEO)は、Webサイトが検索結果で上位に表示されるようにするための重要なスキルです。基本的なSEOの技術と戦略を学びましょう。\n7. プロジェクトで実践する\n　学んだ知識を実践に移し、自分のWebサイトを作成してみましょう。また、フリーランスのプラットフォームを利用して小さなプロジェクトから仕事を始めることも一つの方法です。\n8. ポートフォリオを作成する\n　完成したプロジェクトや自身のスキルを示すためのポートフォリオサイトを作成しましょう。これが、将来的なクライアントへのアピールとなります。\n9. 継続的に学び、スキルアップする\n　Web技術は常に進化しています。オンラインコース、チュートリアル、コミュニティに参加することで、最新のトレンドや技術を学び続けましょう。\nこれらのステップを踏むことで、副業としてWebサイト制作を始めるための基礎を固めることができます。何よりも大切なのは、学び続ける姿勢と実践を通じて経験を積むことです。";
+          let q1_answerText = "Webサイト制作を副業として始めるには、基本的なスキルを身につけることからスタートする必要があります。以下に、Webサイト制作に必要なスキルを習得するためのステップを紹介します。\n\n・HTMLとCSSの基礎を学ぶ\n　Webサイトの構造を作るHTMLと、その見た目を整えるCSSは、Webサイト制作の基本です。これらの言語の基礎を理解し、簡単なページが作れるようになることが第一歩です。\n・JavaScriptを学ぶ\n　JavaScriptは、Webページに動的な要素を加えるためのプログラミング言語です。基本的な操作から始めて、徐々に複雑な機能の実装方法を学びましょう。\n・レスポンシブデザインを理解する\n　スマートフォンやタブレットなど、さまざまなデバイスで適切に表示されるように、レスポンシブデザインの知識を身につけることが重要です。\n・Webデザインの基本を学ぶ\n　良いWebサイトは、使いやすさと見た目の良さが重要です。基本的なデザイン原則を学び、ユーザー体験(UX)とユーザーインターフェイス(UI)の設計について理解しましょう。\n・CMSの利用を学ぶ\n　WordPressなどのコンテンツ管理システム(CMS)を使えば、コーディング知識が少なくてもWebサイトを構築できます。CMSの基本的な使い方を学び、テーマやプラグインのカスタマイズ方法にも触れてみましょう。\n・SEOの基本を理解する\n　検索エンジン最適化(SEO)は、Webサイトが検索結果で上位に表示されるようにするための重要なスキルです。基本的なSEOの技術と戦略を学びましょう。\n・プロジェクトで実践する\n　学んだ知識を実践に移し、自分のWebサイトを作成してみましょう。また、フリーランスのプラットフォームを利用して小さなプロジェクトから仕事を始めることも一つの方法です。\n・ポートフォリオを作成する\n　完成したプロジェクトや自身のスキルを示すためのポートフォリオサイトを作成しましょう。これが、将来的なクライアントへのアピールとなります。\n・継続的に学び、スキルアップする\n　Web技術は常に進化しています。オンラインコース、チュートリアル、コミュニティに参加することで、最新のトレンドや技術を学び続けましょう。\nこれらのステップを踏むことで、副業としてWebサイト制作を始めるための基礎を固めることができます。何よりも大切なのは、学び続ける姿勢と実践を通じて経験を積むことです。";
           function showLetter(text, index, $element, callback) {
             if (index < text.length) {
               // 改行文字を検出した場合
@@ -366,7 +377,7 @@ $(function() {
   });
 
    // 戻るボタンのイベントハンドラ
-   $(document).on("click", ".return, #section2", function() {
+   $(document).on("click", ".return, #section3", function() {
     // experience_containerの内容を初期状態に復元
     $("#experience_container").html(initialExperienceContent).fadeIn(1000);
   });
